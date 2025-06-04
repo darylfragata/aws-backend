@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "dev-tfstatefile-backend"
+  bucket = "dev-tfstatefile-2025"
   tags = {
     Name = "Terraform State Bucket"
   }
@@ -20,7 +20,7 @@ resource "aws_security_group" "gitlab_runner_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["49.150.108.17/32"] # Replace with your GitLab IP
+    cidr_blocks = ["49.150.108.17/32"] # Replace with your public ip
   }
 
   egress {
