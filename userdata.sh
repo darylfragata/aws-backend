@@ -7,6 +7,9 @@ sudo apt update -y
 # Install essential dependencies
 sudo apt install -y unzip curl python3-pip git
 
+#Instakll jq
+apt-get update && apt-get install -y jq
+
 # Install AWS CLI v2
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
