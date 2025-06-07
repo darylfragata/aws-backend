@@ -50,7 +50,7 @@ This project is executed entirely on my **local machine**, which communicates wi
 
 Sample output:
 
-![alt text](/aws-selfhosted-github-runner/image/image.png)
+![alt text](/image/image.png)
 
 5. SSH into the EC2 instance (using your SSH key) if you want to check logs or runner status. The runner is installed and started automatically.
 
