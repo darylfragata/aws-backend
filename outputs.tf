@@ -4,5 +4,5 @@ output "aws_s3_bucket_name" {
 }
 
 output "aws_instance_pub_ip" {
-  value = aws_instance.gitlab_runner.public_ip
+  value = aws_instance.github_runner.public_ip
 }
