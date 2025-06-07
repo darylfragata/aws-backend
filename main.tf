@@ -104,7 +104,7 @@ resource "aws_ssm_parameter" "github_runner_token" {
   name        = "/github/runner/token"
   description = "GitHub Runner token for authentication"
   type        = "SecureString" # Use SecureString for encrypted storage
-  value       = "BEGT2BSCF46YYFZMM4OOB43IIONOO" # Replace with your token
+  value       = "THNKTH1SISTOKENSZCX" # Replace with your token
   tags = {
     Environment = "HomeLab"
   }

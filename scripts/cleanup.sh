@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ..
 set -e  # Exit on error
 echo -e "\nRemoving residue...\n"
 rm -rf .terraform*
