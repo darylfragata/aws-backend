@@ -46,8 +46,12 @@ This project is executed entirely on my **local machine**, which communicates wi
 
    * `aws_s3_bucket_name` – your S3 bucket name
    * `aws_instance_pub_ip` – public IP of your runner EC2 instance
+  
+   Sample Output:
 
-5. SSH into the EC2 instance (using your SSH key) if you want to check logs or runner status. The runner is installed and started automatically.
+   ![](image/image.png)
+
+6. SSH into the EC2 instance (using your SSH key) if you want to check logs or runner status. The runner is installed and started automatically.
 
 
 ## Userdata Script Highlights
