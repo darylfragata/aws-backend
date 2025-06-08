@@ -6,7 +6,7 @@ This Terraform project deploys an EC2 instance as a self-hosted GitHub Actions r
 
 ## Background
 
-I created this project as part of my homelab to sharpen my **DevOps skills**. Since my company provides access to **A Cloud Guru's playground**, I decided to leverage it for my learning. However, the playground has a 5-hour limit, and all infrastructure is deleted once the session expires.
+I created this project as part of my homelab to sharpen my **DevOps skills**. Since my company provides access to **A Cloud Guru's playground**, I decided to leverage it for my learning. However, the playground has a 8-hour limit, and all infrastructure is deleted once the session expires.
 
 To overcome this limitation and avoid repeatedly setting up a GitHub runner for my homelab, I built this Terraform solution. It allows me to:
 

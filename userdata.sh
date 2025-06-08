@@ -47,9 +47,13 @@ sudo -u ubuntu mkdir -p /home/ubuntu/actions-runner
 sudo -u ubuntu curl -o /home/ubuntu/actions-runner/actions-runner-linux-x64-2.325.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.325.0/actions-runner-linux-x64-2.325.0.tar.gz
 sudo -u ubuntu tar xzf /home/ubuntu/actions-runner/actions-runner-linux-x64-2.325.0.tar.gz -C /home/ubuntu/actions-runner
 
-#Pass the token explicitly in the sudo environment when running config.sh:
-#By default, sudo -u ubuntu clears environment variables, so it’s safer to explicitly pass the token in the environment:
-sudo -u ubuntu env RUNNER_TOKEN="$RUNNER_TOKEN" /home/ubuntu/actions-runner/config.sh --url https://github.com/darylfragata/aws-devops-homelab --token "$RUNNER_TOKEN" --name "aws-github-runner" --labels "aws-backend"
+# # Configure with token in environment and auto-replace existing runner
+# sudo -u ubuntu env RUNNER_TOKEN="$RUNNER_TOKEN" \
+echo $RUNNER_TOKEN
+sudo -u ubuntu env RUNNER_TOKEN="$RUNNER_TOKEN" /home/ubuntu/actions-runner/config.sh --url https://github.com/darylfragata/aws-devops-homelab --token "$RUNNER_TOKEN" --name "aws-github-runner" --labels "aws-ec2"
+
+# Start runner
 sudo -u ubuntu /home/ubuntu/actions-runner/run.sh
+
 
  
