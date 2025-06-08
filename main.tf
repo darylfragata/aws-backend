@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "my-homelab-tfstatefile-1"
+  bucket = "homelab-tfstatefile-2025"
   tags = {
     Name = "Terraform State Bucket"
   }
@@ -79,8 +79,8 @@ resource "aws_iam_policy" "github_policy_access" {
           "s3:ListBucket"
         ],
         Resource = [
-          "arn:aws:s3:::dev-tfstatefile-backend",
-          "arn:aws:s3:::dev-tfstatefile-backend/*"
+          "arn:aws:s3:::homelab-tfstatefile-2025",
+          "arn:aws:s3:::homelab-tfstatefile-2025/*"
         ]
       }
     ]
@@ -104,7 +104,7 @@ resource "aws_ssm_parameter" "github_runner_token" {
   name        = "/github/runner/token"
   description = "GitHub Runner token for authentication"
   type        = "SecureString" # Use SecureString for encrypted storage
-  value       = "BEGT2BSZ7GKHCX4AUOPSCG3IIUWAS" # Replace with your token
+  value       = "TOKENTOKENTOKENTOKEN" # Replace with your token. Note that this expires.
   tags = {
     Environment = "HomeLab"
   }
